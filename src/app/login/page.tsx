@@ -2,8 +2,9 @@
 import Link from "next/link"
 import React, { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import axios, { Axios } from "axios"
+import axios from "axios"
 import { toast } from "react-hot-toast"
+import { userSchema } from "../utils/type"
 
 
 export default function LoginPage() {
@@ -12,7 +13,7 @@ export default function LoginPage() {
 
     const [loading, setLoading] = useState(false);
     const [buttonDisable, setButtonDisable] = useState(false);
-    const [user, setUser] = useState({
+    const [user, setUser] = useState<userSchema>({
         email: "",
         password: "",
     });

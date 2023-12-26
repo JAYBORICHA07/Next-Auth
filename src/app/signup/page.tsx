@@ -2,7 +2,7 @@
 import Link from "next/link"
 import React, { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import axios, { Axios } from "axios"
+import axios from "axios"
 import { toast } from "react-hot-toast"
 
 
