@@ -19,6 +19,11 @@ export default function ProfilePage(){
         }
     }
 
+    const getUserDetails = async () => {
+        const res = await axios.get("/api/users/tokendetails");
+        console.log(res.data);
+    }
+
     return(
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <h1>
@@ -28,6 +33,7 @@ export default function ProfilePage(){
             <p>Profile page</p>
             <hr />
             <button className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={logOut}>Logout</button>
+            <button className="bg-slate-500 mt-4 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded" onClick={getUserDetails}>Get User Details</button>
         </div>
     )
 }
